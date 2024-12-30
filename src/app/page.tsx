@@ -1,9 +1,7 @@
-import { Button } from "@/components/ui/button";
+import { permanentRedirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <div>
-      <Button variant={"outline"}>Click me</Button>
-    </div>
-  );
+  permanentRedirect("/dashboard");
+
+  return null;
 }

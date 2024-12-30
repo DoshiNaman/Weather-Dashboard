@@ -12,15 +12,19 @@ const DashboardHeader = () => {
   return (
     <header
       className={cn(
-        "flex items-center gap-3 sm:gap-4 bg-background p-4 h-16 group",
+        "flex items-center max-md:items-start max-md:w-[100dvw] justify-between gap-1 md:gap-4 bg-background p-4 md:h-16 h-auto group",
         "shadow-none"
       )}
     >
-      <SidebarTrigger variant="outline" className="scale-125 sm:scale-100" />
-      <Separator orientation="vertical" className="h-6" />
-      <h1 className="text-2xl">Dashboard</h1>
+      <div className="flex gap-3 sm:gap-4">
+        <SidebarTrigger variant="outline" className="scale-125 sm:scale-100" />
+        <Separator orientation="vertical" className="h-6" />
+        <h1 className="text-2xl font-extralight tracking-tighter opacity-80">
+          Dashboard
+        </h1>
+      </div>
 
-      <div className="ml-auto flex items-center space-x-4">
+      <div className="flex items-center max-md:gap-1 md:space-x-4">
         <Button
           variant="ghost"
           size="icon"

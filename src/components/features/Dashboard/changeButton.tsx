@@ -40,7 +40,7 @@ const ChangeButton = () => {
         </span>
       </button>
 
-      <WeatherModel open={open} setOpen={setOpen} isEdit />
+      {/* <WeatherModel open={open} setOpen={setOpen} isEdit /> */}
     </>
   );
 };

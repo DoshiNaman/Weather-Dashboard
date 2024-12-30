@@ -30,6 +30,7 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 import { NavGroup } from "./nav-group";
+import NavProgress from "./nav-progress";
 
 // This is sample data.
 const data = {
@@ -143,6 +144,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         />
       </SidebarContent>
       <SidebarFooter>
+        <NavProgress />
         <NavUser user={data.user} />
       </SidebarFooter>
       <SidebarRail />

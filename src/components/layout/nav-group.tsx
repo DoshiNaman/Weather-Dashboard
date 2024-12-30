@@ -47,43 +47,41 @@ export function NavGroup({
         {items.map((item, key) => (
           <>
             {item.items ? (
-              <>
-                <Collapsible
-                  key={key}
-                  asChild
-                  defaultOpen={item.isActive}
-                  className="group/collapsible"
-                >
-                  <SidebarMenuItem>
-                    <CollapsibleTrigger asChild>
-                      <SidebarMenuButton tooltip={item.title}>
-                        {item.icon && <item.icon />}
-                        <span>{item.title}</span>
-                        <ChevronRight
-                          className={`ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90 `}
-                        />
-                      </SidebarMenuButton>
-                    </CollapsibleTrigger>
-                    <CollapsibleContent>
-                      <SidebarMenuSub>
-                        {item.items?.map((subItem, key) => (
-                          <SidebarMenuSubItem key={key}>
-                            <SidebarMenuSubButton asChild>
-                              <a href={subItem.url}>
-                                {subItem.icon && <subItem.icon />}
-                                <span>{subItem.title}</span>
-                                {subItem.badge && (
-                                  <NavBadge>{subItem.badge}</NavBadge>
-                                )}
-                              </a>
-                            </SidebarMenuSubButton>
-                          </SidebarMenuSubItem>
-                        ))}
-                      </SidebarMenuSub>
-                    </CollapsibleContent>
-                  </SidebarMenuItem>
-                </Collapsible>
-              </>
+              <Collapsible
+                key={key}
+                asChild
+                defaultOpen={item.isActive}
+                className="group/collapsible"
+              >
+                <SidebarMenuItem>
+                  <CollapsibleTrigger asChild>
+                    <SidebarMenuButton tooltip={item.title}>
+                      {item.icon && <item.icon />}
+                      <span>{item.title}</span>
+                      <ChevronRight
+                        className={`ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90 `}
+                      />
+                    </SidebarMenuButton>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent>
+                    <SidebarMenuSub>
+                      {item.items?.map((subItem, key) => (
+                        <SidebarMenuSubItem key={key}>
+                          <SidebarMenuSubButton asChild>
+                            <a href={subItem.url}>
+                              {subItem.icon && <subItem.icon />}
+                              <span>{subItem.title}</span>
+                              {subItem.badge && (
+                                <NavBadge>{subItem.badge}</NavBadge>
+                              )}
+                            </a>
+                          </SidebarMenuSubButton>
+                        </SidebarMenuSubItem>
+                      ))}
+                    </SidebarMenuSub>
+                  </CollapsibleContent>
+                </SidebarMenuItem>
+              </Collapsible>
             ) : (
               <>
                 <SidebarMenuItem key={key}>
