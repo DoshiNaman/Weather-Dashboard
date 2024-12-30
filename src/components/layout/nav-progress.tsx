@@ -14,7 +14,7 @@ const NavProgress = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const { isMobile, open } = useSidebar();
+  const { open } = useSidebar();
   return (
     <div>
       <div className="flex gap-1 pb-1  text-muted-foreground">

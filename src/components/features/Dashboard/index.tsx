@@ -3,16 +3,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React, { useEffect, useState } from "react";
 import { WeatherForcastChart } from "./weatherForcastChart";
-import ChangeButton from "./changeButton";
 import {
   CalendarArrowDown,
   CalendarArrowUp,
   CircleFadingPlus,
-  CircleX,
   Minus,
   Pen,
   Plus,
-  SquarePen,
   Trash2,
 } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
@@ -30,14 +27,12 @@ import { weatherStore } from "@/stores/weather-store";
 import WeatherModel from "./weatherModel";
 import {
   AlertDialog,
-  AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { toast } from "sonner";
 import WeatherForcastTable from "./weatherForcastTable";
